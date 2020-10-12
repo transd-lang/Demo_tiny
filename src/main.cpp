@@ -1,7 +1,7 @@
 /*
 Copyright (c) 2020 Albert Berger
 
-Licensed under the Apache License, Version 2.0 (the "License");
+This file is icensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may view the text of the License in the 'LICENSE' file
 shipped with the distribution of Demo_tiny.

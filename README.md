@@ -1,8 +1,26 @@
 # Demo_tiny
-This example program demonstrates the basics of working of a C++ program with the embedded
-Transd. The C++ program here creates a graph of a math function, repeatedly calling a
-procedure defined in an external Transd program. The graph is outputted into a
+This example project demonstrates the basics of working of a C++ program with the
+embedded Transd. The C++ program here creates a graph of a math function, repeatedly 
+calling a procedure defined in an external Transd program. The graph is outputted into a
 PPM image file.
+
+The notable thing that this demo project demonstrates is the speed of interaction between
+C++ and Transd programs. Within the double for-loop the external Transd function, defined
+in a Transd source file, is called 1 million times:
+
+```
+int width = 1000;
+int height = 1000;
+transd::TDType* func = transd::getProc( prog, L"tst::getShade" );
+...
+for( int i = 0; i < width; ++i ) {
+    for( int k = 0; k < height; ++k ) {
+        *x = (double)i - width / 2;
+        *y = (double)k;
+
+        int res = *(int*)transd::execute( func );
+```
+
 
 ### How to build
 
